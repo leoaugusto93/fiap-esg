@@ -1,29 +1,123 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+:root,
+[data-bs-theme=light] {
+    --color-100: #FFFFFF;
+    --color-150: #6C757D;
+    --color-200: #8391A2;
+    --color-300: #8BC34A;
+    --color-400: #0ACf97;
+    --color-500: #FFB64B;
+    --color-600: #0D6EFD;
+    --color-700: #E91E63;
+    --color-800: #727CF5;
+    --color-body: #EEEEEE;
+    --border-radius: .375rem;
+    --font-family: "Varela Round", sans-serif;
+    --box-shadow: 0px 0px 35px 0px rgba(154, 161, 171, 0.15);
+}
 body {
-    background-color: #0F1015;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-  
-code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+    font-family: var(--font-family);
+    background-color: var(--color-body);
+    scroll-behavior: smooth;
 }
 
 /*---- =======================
-MAIN START -------------*/
-.main {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+FIELD START ------------*/
+.input-password > svg {
+  position: absolute;
+  padding: .2rem .4rem .1rem .4rem;
+  right: .4rem;
+  font-size: 2rem;
+  cursor: pointer;
+  background-color: var(--bs-body-bg);
+  border-radius: var(--border-radius);
+  transform: translateY(-2.4rem);
+}
+.form-control:focus {
+  border-color:#7298E6;
+  box-shadow:0 0 0 .25rem rgba(114, 152, 230, .25);
 }
 /*---- =======================
-MAIN END ---------------*/
+FIELD END --------------*/
 
-/**** =======================
-@MEDIA 768px START ****/
-@media only screen and (max-width: 768px) {
-    .main {
-        padding: 2rem;
-    }
+/*---- =======================
+BUTTON START -----------*/
+.btn {
+    padding: .56rem .6rem;
+    font-size: .75rem;
+    text-transform: uppercase;
+    box-shadow: none;
+    border-radius: .25rem;
 }
-/**** =======================
-@media 768px END ******/
+.btn.btn-sm {
+    padding: .4rem .5rem .2rem .5rem !important;
+    font-size: .7rem !important;
+}
+.btn.btn-lg {
+    padding-top: .825rem !important;
+    padding-bottom: .7rem !important;
+}
+.btn-150 {
+    color: #FFF !important;
+    border-color: var(--color-150) !important;
+    background-color: var(--color-150) !important;
+}
+.btn-150:hover,
+.btn-150:focus {
+    background-color: #616970 !important;
+}
+.btn-400 {
+    color: #FFF !important;
+    border-color: var(--color-400) !important;
+    background-color: var(--color-400) !important;
+}
+.btn-400:hover,
+.btn-400:focus {
+    background-color: #09BF8C !important;
+}
+.btn-700 {
+    color: #FFF !important;
+    border-color: var(--color-700) !important;
+    background-color: var(--color-700) !important;
+}
+.btn-700:hover,
+.btn-700:focus {
+    background-color: #D11B59 !important;
+}
+.btn-800 {
+    color: #FFF !important;
+    border-color: var(--color-800) !important;
+    background-color: var(--color-800) !important;
+}
+.btn-800:hover,
+.btn-800:focus {
+    background-color: #666FDC !important;
+}
+/*---- =======================
+BUTTON END -------------*/
+
+/*---- =======================
+CARD START -------------*/
+.card {
+    border: none !important;
+    box-shadow: var(--box-shadow);
+    background-color: var(--color-card) !important;
+}
+.card .card-body.d-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.card .card-body.d-flex i {
+    font-size: 2rem !important;
+    opacity: .6;
+}
+.card .card-body.d-flex i,
+.card .card-body.d-flex h1,
+.card .card-body.d-flex h2 {
+    font-size: 1rem;
+    color: #000000 !important;
+}
+/*---- =======================
+CARD END ---------------*/

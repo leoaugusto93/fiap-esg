@@ -26,12 +26,12 @@ export default function TopMenu() {
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
-                        <Nav.Link href="#">Alimentação</Nav.Link>
-                        <Nav.Link href="#">Atividade Física</Nav.Link>
-                        <Nav.Link href="#">Horta</Nav.Link>
-                        <Nav.Link href="#">Reciclagem</Nav.Link>
-                        <Nav.Link href="#">Voluntário</Nav.Link>
-                        <Nav.Link href="#">Horta</Nav.Link>
+                        <Nav.Link href="#" disabled>Alimentação</Nav.Link>
+                        <Nav.Link href="#" disabled>Atividade Física</Nav.Link>
+                        <Nav.Link href="#" disabled>Horta</Nav.Link>
+                        <Nav.Link href="/reciclagem">Reciclagem</Nav.Link>
+                        <Nav.Link href="#" disabled>Voluntário</Nav.Link>
+                        <Nav.Link href="#" disabled>Horta</Nav.Link>
                     </Nav>
                     <Nav>
                         <NavDropdown title="Olá, USUÁRIO" id="collasible-nav-dropdown">
