@@ -1,10 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-import esgLogo from '../../assets/images/esg-logo.png';
+import esgLogo from '../../assets/images/esg-logo-cut.png';
+import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
+import { FaHome, FaMortarPestle, FaRunning, FaPagelines, FaRecycle, FaHandshake } from "react-icons/fa";
 
 const Logo = styled.img.attrs({
     src: esgLogo,
@@ -22,23 +20,20 @@ export default function TopMenu() {
     return (
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
             <Container>
-                <Navbar.Brand href="#"><Logo /></Navbar.Brand>
+                <Navbar.Brand><Logo /></Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
-                        <Nav.Link href="#" disabled>Alimentação</Nav.Link>
-                        <Nav.Link href="#" disabled>Atividade Física</Nav.Link>
-                        <Nav.Link href="#" disabled>Horta</Nav.Link>
-                        <Nav.Link href="/reciclagem">Reciclagem</Nav.Link>
-                        <Nav.Link href="#" disabled>Voluntário</Nav.Link>
-                        <Nav.Link href="#" disabled>Horta</Nav.Link>
+                        <Nav.Link href="/home"><FaHome /> <span>Home</span></Nav.Link>
+                        <Nav.Link href="#" disabled><FaMortarPestle /> <span>Alimentação</span></Nav.Link>
+                        <Nav.Link href="#" disabled><FaRunning /> <span>Atividade</span></Nav.Link>
+                        <Nav.Link href="#" disabled><FaPagelines /> <span>Horta</span></Nav.Link>
+                        <Nav.Link href="/recycling"><FaRecycle /> <span>Reciclagem</span></Nav.Link>
+                        <Nav.Link href="#" disabled><FaHandshake /> <span>Voluntário</span></Nav.Link>
                     </Nav>
-                    <Nav>
-                        <NavDropdown title="Olá, USUÁRIO" id="collasible-nav-dropdown">
-                            <NavDropdown.Item href="#">Settings</NavDropdown.Item>
-                            <NavDropdown.Item href="#">Profile</NavDropdown.Item>
-                            <NavDropdown.Divider />
-                            <NavDropdown.Item href="/">Logout</NavDropdown.Item>
+                    <Nav className="ms-auto">
+                        <NavDropdown title="Olá, USUÁRIO">
+                            <NavDropdown.Item href="/">Sair</NavDropdown.Item>
                         </NavDropdown>
                     </Nav>
                 </Navbar.Collapse>

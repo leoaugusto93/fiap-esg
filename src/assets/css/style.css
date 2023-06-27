@@ -23,6 +23,43 @@ body {
 }
 
 /*---- =======================
+NAVBAR START -----------*/
+.navbar.navbar > .container > .navbar-collapse > .navbar-nav a.nav-link {
+    display: flex;
+    font-size: .78rem;
+    align-items: center;
+    flex-direction: column;
+}
+.navbar.navbar > .container > .navbar-collapse > .navbar-nav a.nav-link > svg {
+    margin-bottom: .2rem;
+    font-size: 1.2rem;
+}
+@media only screen and (max-width: 768px) {
+    .navbar.navbar > .container > .navbar-collapse > .navbar-nav a.nav-link {
+        flex-direction: row;
+    }
+    .navbar.navbar > .container > .navbar-collapse > .navbar-nav a.nav-link > svg {
+        margin-right: 1rem;
+        font-size: .8rem;
+    }
+}
+/*---- =======================
+NAVBAR END -------------*/
+
+/*---- =======================
+MAIN START -------------*/
+main.main {
+    padding: 2rem 0;
+}
+@media only screen and (max-width: 768px) {
+    main.main {
+        padding: 1rem 0;
+    }
+}
+/*---- =======================
+MAIN END ---------------*/
+
+/*---- =======================
 FIELD START ------------*/
 .input-password > svg {
   position: absolute;
@@ -102,22 +139,14 @@ CARD START -------------*/
 .card {
     border: none !important;
     box-shadow: var(--box-shadow);
-    background-color: var(--color-card) !important;
 }
-.card .card-body.d-flex {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.card .card-body.d-flex i {
+.card .card-body.d-flex svg {
     font-size: 2rem !important;
     opacity: .6;
 }
-.card .card-body.d-flex i,
-.card .card-body.d-flex h1,
-.card .card-body.d-flex h2 {
-    font-size: 1rem;
-    color: #000000 !important;
+.card .card-footer {
+    padding: 0 1rem 1rem 1rem !important;
+    border-top: none !important;
 }
 /*---- =======================
 CARD END ---------------*/

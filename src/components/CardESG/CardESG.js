@@ -1,25 +1,24 @@
 import React from "react";
-import Col from 'react-bootstrap/Col';
-import { Card } from "react-bootstrap";
 import styled from "styled-components";
+import { Col, Card, Button } from "react-bootstrap";
 
-const InformationGrid = styled.div`
-    display: grid;
-    grid-template-columns: 1fr 70px;
+const CardIcon = styled.div`
+    height: 70px;
 `;
 
-export default function CardESG({title, description, icon}) {
+export default function CardESG({color, title, description, icon, link}) {
     return <Col>
         <Card>
-            <Card.Body>
-                <InformationGrid>
-                    <div>
-                        <Card.Title>{title}</Card.Title>
-                        <Card.Text>{description}</Card.Text>
-                    </div>
-                    
-                </InformationGrid>
+            <Card.Body className="d-flex align-items-center justify-content-between">
+                <div>
+                    <Card.Title>{title}</Card.Title>
+                    <Card.Text>{description}</Card.Text>
+                </div>
+                <CardIcon style={{color: color}}>{icon}</CardIcon>
             </Card.Body>
+            <div className="card-footer">
+                <Button href={link} className="btn-800">Ver mais</Button>
+            </div>
         </Card>
     </Col>
 }

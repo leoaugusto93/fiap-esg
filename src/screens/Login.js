@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 import { FaEyeSlash } from "react-icons/fa";
 import esgLogo from '../assets/images/esg-logo.png';
@@ -10,7 +9,6 @@ const ContainerLogin = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    column-gap: 1.8rem;
 `;
 
 const CardLogin = styled.div`
@@ -19,7 +17,12 @@ const CardLogin = styled.div`
     padding: 1.8rem;
     background-color: #FFFFFF;
     border-radius: .375rem;
-    box-shadow: 0px 0px 35px 0px rgba(154, 161, 171, 0.15)
+    box-shadow: 0px 0px 35px 0px rgba(154, 161, 171, 0.15);
+
+    @media only screen and (max-width: 768px) {
+        width: 100vw;
+        border-radius: 0;
+    }
 `;
 
 const Logo = styled.img.attrs({
