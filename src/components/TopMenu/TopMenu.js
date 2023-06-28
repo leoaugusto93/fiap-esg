@@ -28,8 +28,8 @@ export default function TopMenu() {
                         <Nav.Link href="#" disabled><FaMortarPestle /> <span>Alimentação</span></Nav.Link>
                         <Nav.Link href="#" disabled><FaRunning /> <span>Atividade</span></Nav.Link>
                         <Nav.Link href="#" disabled><FaPagelines /> <span>Horta</span></Nav.Link>
-                        <Nav.Link href="/recycling"><FaRecycle /> <span>Reciclagem</span></Nav.Link>
-                        <Nav.Link href="#" disabled><FaHandshake /> <span>Voluntário</span></Nav.Link>
+                        <Nav.Link href="#" disabled><FaRecycle /> <span>Reciclagem</span></Nav.Link>
+                        <Nav.Link href="/voluntary"><FaHandshake /> <span>Voluntário</span></Nav.Link>
                     </Nav>
                     <Nav className="ms-auto">
                         <NavDropdown title="Olá, USUÁRIO">

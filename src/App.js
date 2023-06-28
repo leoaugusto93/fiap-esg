@@ -1,7 +1,7 @@
 import Home from './screens/Home';
 import Login from './screens/Login';
 import NotFound from './screens/NotFound';
-import Recycling from './screens/Recycling';
+import Voluntary from './screens/Voluntary';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 const router = createBrowserRouter ([
@@ -14,8 +14,8 @@ const router = createBrowserRouter ([
     element: <Home />,
   },
   {
-    path: 'recycling',
-    element: <Recycling />,
+    path: 'voluntary',
+    element: <Voluntary />,
   },
   {
     path: '*',
