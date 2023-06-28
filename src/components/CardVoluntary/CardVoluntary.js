@@ -1,10 +1,6 @@
 import styled from "styled-components";
-import { FaHandshake } from "react-icons/fa";
 import image01 from "../../assets/images/001.png";
-import image02 from "../../assets/images/002.png";
-import image03 from "../../assets/images/003.png";
-import image04 from "../../assets/images/004.png";
-import { Col, Card, Button } from "react-bootstrap";
+import { Col, ListGroup, Button } from "react-bootstrap";
 
 const VoluntaryImage01 = styled.img.attrs({
     src: image01,
@@ -14,90 +10,47 @@ const VoluntaryImage01 = styled.img.attrs({
     height: 6rem;
     border-radius: 1rem;
 `;
-const VoluntaryImage02 = styled.img.attrs({
-    src: image02,
-    alt: 'Voluntary image 02',
-})`
-    width: 6rem;
-    height: 6rem;
-    border-radius: 1rem;
+const CardScore = styled.div`
+    padding: .8rem;
+    text-align: center;
+    background-color: #EEEEEE;
+    border-radius: .5rem;
 `;
-const VoluntaryImage03 = styled.img.attrs({
-    src: image03,
-    alt: 'Voluntary image 03',
-})`
-    width: 6rem;
-    height: 6rem;
-    border-radius: 1rem;
-`;
-const VoluntaryImage04 = styled.img.attrs({
-    src: image04,
-    alt: 'Voluntary image 04',
-})`
-    min-width: 5rem;
-    height: 6rem;
-    border-radius: 1rem;
+const CardInfo = styled.div`
+    display: flex;
+
+    @media only screen and (max-width: 768px) {
+        flex-direction: column;
+    }
 `;
 
 export default function CardVoluntary() {
     return (
         <>
             <Col>
-                <Card>
-                    <Card.Body>
-                        <Card.Title className="d-flex align-items-center">
+                <ListGroup variant="flush">
+                    <ListGroup.Item className="mb-4 pb-4">
+                        <CardInfo>
                             <VoluntaryImage01 />
-                            <div className="ms-4">
-                                <h6 className="fw-bold">Food 4 All</h6>
-                                <FaHandshake className="text-primary fs-1" />
+                            <div className="px-4">
+                                <div className="d-flex w-100 justify-content-between">
+                                    <h5 className="fw-bold mb-1">Food 4 All</h5>
+                                    <small>27/06/2023</small>
+                                </div>
+                                <p>
+                                    Nos ajude neste difícil desafio que é o combate à fome,
+                                    cadastre-se e leve alimento à milhares de famílias e pessoas necessitadas.
+                                    Cadastre-se como um doador ou voluntário.
+                                </p>
+                                <Button href="https://fiap-food-4-all.vercel.app">Ver site</Button>
                             </div>
-                        </Card.Title>
-                        <Card.Text>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</Card.Text>
-                        <Button href="">Ver site</Button>
-                    </Card.Body>
-                </Card>
-            </Col>
-            <Col>
-                <Card>
-                    <Card.Body>
-                        <Card.Title className="d-flex align-items-center">
-                            <VoluntaryImage02 />
-                            <div className="ms-4">
-                                <h6 className="fw-bold">Casas André Luiz</h6>
-                            </div>
-                        </Card.Title>
-                        <Card.Text>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</Card.Text>
-                        <Button variant="link" disabled>Ver perfil</Button>
-                    </Card.Body>
-                </Card>
-            </Col>
-            <Col>
-                <Card>
-                    <Card.Body>
-                        <Card.Title className="d-flex align-items-center">
-                            <VoluntaryImage03 />
-                            <div className="ms-4">
-                                <h6 className="fw-bold">Amigos do Bem</h6>
-                            </div>
-                        </Card.Title>
-                        <Card.Text>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</Card.Text>
-                        <Button variant="link" disabled>Ver perfil</Button>
-                    </Card.Body>
-                </Card>
-            </Col>
-            <Col>
-                <Card>
-                    <Card.Body>
-                        <Card.Title className="d-flex align-items-center">
-                            <VoluntaryImage04 />
-                            <div className="ms-4">
-                                <h6 className="fw-bold">Banco de Alimentos</h6>
-                            </div>
-                        </Card.Title>
-                        <Card.Text>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</Card.Text>
-                        <Button variant="link" disabled>Ver perfil</Button>
-                    </Card.Body>
-                </Card>
+                            <CardScore>
+                                <h2>180</h2>
+                                <small>pontos</small>
+                            </CardScore>
+                        </CardInfo>
+                    </ListGroup.Item>
+                </ListGroup>
             </Col>
         </>
     );
